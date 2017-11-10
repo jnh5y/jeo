@@ -29,7 +29,7 @@ import io.jeo.geom.Geom;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.vividsolutions.jts.geom.Point;
+import org.locationtech.jts.geom.Point;
 
 public class GeoPkgTest extends GeoPkgTestSupport {
 

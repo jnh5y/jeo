@@ -16,7 +16,7 @@ package io.jeo.util;
 
 import java.util.Locale;
 
-import com.vividsolutions.jts.geom.Envelope;
+import org.locationtech.jts.geom.Envelope;
 
 /**
  * Rectangle class.

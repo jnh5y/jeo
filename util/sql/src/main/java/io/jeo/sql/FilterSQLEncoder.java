@@ -38,7 +38,7 @@ import io.jeo.filter.Property;
 import io.jeo.filter.Spatial;
 import io.jeo.util.Pair;
 
-import com.vividsolutions.jts.geom.Geometry;
+import org.locationtech.jts.geom.Geometry;
 
 import io.jeo.filter.In;
 import io.jeo.filter.Like;

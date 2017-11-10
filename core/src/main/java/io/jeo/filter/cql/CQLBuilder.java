@@ -316,7 +316,7 @@ public class CQLBuilder extends CQLParser {
             try {
                 h.wktLiteral(n.getToken());
                 return;
-            } catch (com.vividsolutions.jts.io.ParseException e) {
+            } catch (org.locationtech.jts.io.ParseException e) {
                 throw (ParseException) new ParseException().initCause(e);
             }
             //return this.builder.buildGeometry(TokenAdapter.newAdapterFor(cqlNode.getToken()));

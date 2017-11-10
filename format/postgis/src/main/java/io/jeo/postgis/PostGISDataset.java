@@ -54,10 +54,10 @@ import io.jeo.util.Pair;
 import io.jeo.util.Util;
 import org.osgeo.proj4j.CoordinateReferenceSystem;
 
-import com.vividsolutions.jts.geom.Geometry;
-import com.vividsolutions.jts.geom.Polygon;
-import com.vividsolutions.jts.io.WKBReader;
-import com.vividsolutions.jts.io.WKTWriter;
+import org.locationtech.jts.geom.Geometry;
+import org.locationtech.jts.geom.Polygon;
+import org.locationtech.jts.io.WKBReader;
+import org.locationtech.jts.io.WKTWriter;
 
 import java.util.Set;
 

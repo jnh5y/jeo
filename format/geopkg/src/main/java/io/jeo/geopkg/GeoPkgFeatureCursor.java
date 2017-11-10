@@ -27,7 +27,7 @@ import io.jeo.geopkg.geom.GeoPkgGeomReader;
 import io.jeo.sql.PrimaryKey;
 import io.jeo.sql.PrimaryKeyColumn;
 
-import com.vividsolutions.jts.geom.Geometry;
+import org.locationtech.jts.geom.Geometry;
 import io.jeo.sql.Backend.Session;
 import io.jeo.sql.Backend.Results;
 import io.jeo.vector.SchemaBuilder;

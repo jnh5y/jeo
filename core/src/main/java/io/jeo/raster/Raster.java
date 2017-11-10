@@ -14,7 +14,7 @@
  */
 package io.jeo.raster;
 
-import com.vividsolutions.jts.geom.Envelope;
+import org.locationtech.jts.geom.Envelope;
 import io.jeo.util.Dimension;
 import org.osgeo.proj4j.CoordinateReferenceSystem;
 

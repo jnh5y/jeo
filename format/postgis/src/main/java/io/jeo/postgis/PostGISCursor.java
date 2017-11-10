@@ -14,7 +14,7 @@
  */
 package io.jeo.postgis;
 
-import com.vividsolutions.jts.io.WKBReader;
+import org.locationtech.jts.io.WKBReader;
 import io.jeo.sql.PrimaryKey;
 import io.jeo.sql.PrimaryKeyColumn;
 import io.jeo.vector.Feature;

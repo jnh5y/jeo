@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.util.List;
 
 import com.csvreader.CsvReader;
-import com.vividsolutions.jts.geom.Geometry;
+import org.locationtech.jts.geom.Geometry;
 
 /**
  * Strategy dealing with structure of CSV file. 

@@ -14,7 +14,7 @@
  */
 package io.jeo.json;
 
-import com.vividsolutions.jts.geom.Envelope;
+import org.locationtech.jts.geom.Envelope;
 import io.jeo.data.Dataset;
 import io.jeo.data.Driver;
 import io.jeo.data.Handle;

@@ -16,7 +16,7 @@ package io.jeo.vector;
 
 import java.util.Map;
 
-import com.vividsolutions.jts.geom.Geometry;
+import org.locationtech.jts.geom.Geometry;
 
 /**
  * An object consisting of a set of named attributes, any of which may be a vector geometry. 

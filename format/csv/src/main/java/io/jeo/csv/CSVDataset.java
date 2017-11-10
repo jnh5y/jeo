@@ -38,7 +38,7 @@ import io.jeo.vector.VectorQueryPlan;
 import org.osgeo.proj4j.CoordinateReferenceSystem;
 
 import com.csvreader.CsvReader;
-import com.vividsolutions.jts.geom.Geometry;
+import org.locationtech.jts.geom.Geometry;
 
 public class CSVDataset implements VectorDataset, FileData {
 

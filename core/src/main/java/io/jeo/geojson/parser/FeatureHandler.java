@@ -25,7 +25,7 @@ import io.jeo.vector.Feature;
 import io.jeo.vector.MapFeature;
 import org.osgeo.proj4j.CoordinateReferenceSystem;
 
-import com.vividsolutions.jts.geom.Geometry;
+import org.locationtech.jts.geom.Geometry;
 
 public class FeatureHandler extends BaseHandler {
 

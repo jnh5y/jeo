@@ -33,8 +33,8 @@ import org.osgeo.proj4j.CoordinateReferenceSystem;
 
 import com.google.common.base.Predicate;
 import com.google.common.collect.Sets;
-import com.vividsolutions.jts.geom.Envelope;
-import com.vividsolutions.jts.geom.Point;
+import org.locationtech.jts.geom.Envelope;
+import org.locationtech.jts.geom.Point;
 
 /**
  * Abstract test case that exercises all aspects of the {@link VectorDataset} interface.

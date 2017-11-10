@@ -1,8 +1,8 @@
 package io.jeo.vector;
 
-import com.vividsolutions.jts.geom.Envelope;
-import com.vividsolutions.jts.geom.Geometry;
-import com.vividsolutions.jts.geom.prep.PreparedGeometry;
+import org.locationtech.jts.geom.Envelope;
+import org.locationtech.jts.geom.Geometry;
+import org.locationtech.jts.geom.prep.PreparedGeometry;
 import io.jeo.data.Cursor;
 import io.jeo.geom.Bounds;
 import io.jeo.geom.Geom;

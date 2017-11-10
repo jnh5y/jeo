@@ -20,7 +20,7 @@ import java.util.List;
 
 import io.jeo.json.parser.ParseException;
 
-import com.vividsolutions.jts.geom.Envelope;
+import org.locationtech.jts.geom.Envelope;
 
 public class BBOXHandler extends BaseHandler {
 

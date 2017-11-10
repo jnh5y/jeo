@@ -24,7 +24,7 @@ import io.jeo.geom.Geom.Type;
 import io.jeo.proj.Proj;
 import org.osgeo.proj4j.CoordinateReferenceSystem;
 
-import com.vividsolutions.jts.geom.Geometry;
+import org.locationtech.jts.geom.Geometry;
 
 /**
  * Builder for {@link Schema} objects.

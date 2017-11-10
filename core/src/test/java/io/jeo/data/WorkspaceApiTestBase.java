@@ -16,7 +16,7 @@ package io.jeo.data;
 
 import com.google.common.base.Predicate;
 import com.google.common.collect.Iterables;
-import com.vividsolutions.jts.geom.Point;
+import org.locationtech.jts.geom.Point;
 import io.jeo.proj.Proj;
 import io.jeo.vector.Schema;
 import io.jeo.vector.VectorDataset;

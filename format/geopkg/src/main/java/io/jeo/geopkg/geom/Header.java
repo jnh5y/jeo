@@ -14,7 +14,7 @@
  */
 package io.jeo.geopkg.geom;
 
-import com.vividsolutions.jts.geom.Envelope;
+import org.locationtech.jts.geom.Envelope;
 
 class Header {
     Flags flags;

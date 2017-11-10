@@ -414,6 +414,7 @@
     <forbiddenapis.exclude>none</forbiddenapis.exclude>
 
     <!-- versions -->
+    <jts.version>1.15.0-SNAPSHOT</jts.version>
     <slf4j.version>1.7.2</slf4j.version>
     <gdal.version>1.11.1</gdal.version>
   </properties>

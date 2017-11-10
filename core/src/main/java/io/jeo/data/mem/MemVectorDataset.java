@@ -21,7 +21,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.vividsolutions.jts.geom.Envelope;
+import org.locationtech.jts.geom.Envelope;
 import io.jeo.geom.Bounds;
 import io.jeo.vector.DiffFeature;
 import io.jeo.vector.FeatureAppendCursor;
@@ -36,9 +36,9 @@ import io.jeo.vector.Schema;
 import io.jeo.util.Key;
 import org.osgeo.proj4j.CoordinateReferenceSystem;
 
-import com.vividsolutions.jts.geom.Geometry;
-import com.vividsolutions.jts.index.SpatialIndex;
-import com.vividsolutions.jts.index.quadtree.Quadtree;
+import org.locationtech.jts.geom.Geometry;
+import org.locationtech.jts.index.SpatialIndex;
+import org.locationtech.jts.index.quadtree.Quadtree;
 
 public class MemVectorDataset implements VectorDataset {
 

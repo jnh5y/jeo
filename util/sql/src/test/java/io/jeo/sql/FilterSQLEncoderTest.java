@@ -21,7 +21,7 @@ import io.jeo.geom.GeomBuilder;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.vividsolutions.jts.geom.Geometry;
+import org.locationtech.jts.geom.Geometry;
 
 public class FilterSQLEncoderTest {
 

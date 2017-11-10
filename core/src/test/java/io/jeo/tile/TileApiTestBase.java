@@ -20,7 +20,7 @@ import io.jeo.TestData;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.vividsolutions.jts.geom.Envelope;
+import org.locationtech.jts.geom.Envelope;
 
 /**
  * Abstract test case that exercises all aspects of the {@link TileDataset} interface.

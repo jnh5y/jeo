@@ -17,7 +17,7 @@ package io.jeo;
 import java.io.IOException;
 import java.util.Arrays;
 
-import com.vividsolutions.jts.geom.*;
+import org.locationtech.jts.geom.*;
 import io.jeo.geom.Bounds;
 import io.jeo.raster.Band;
 import io.jeo.raster.RasterDataset;
@@ -35,8 +35,8 @@ import io.jeo.vector.Feature;
 import io.jeo.vector.Schema;
 import io.jeo.vector.SchemaBuilder;
 
-import com.vividsolutions.jts.io.ParseException;
-import com.vividsolutions.jts.io.WKTReader;
+import org.locationtech.jts.io.ParseException;
+import org.locationtech.jts.io.WKTReader;
 
 public class TestData {
 

@@ -1,8 +1,8 @@
 package io.jeo.geom;
 
-import com.vividsolutions.jts.geom.Coordinate;
-import com.vividsolutions.jts.geom.Envelope;
-import com.vividsolutions.jts.geom.Polygon;
+import org.locationtech.jts.geom.Coordinate;
+import org.locationtech.jts.geom.Envelope;
+import org.locationtech.jts.geom.Polygon;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -311,7 +311,7 @@ public class Bounds extends Envelope {
      * @param maxRes Maximum resolution constraint.
      * @param n Number of bounding boxes to generate.
      *
-     * @see #random(com.vividsolutions.jts.geom.Envelope, float)
+     * @see #random(org.locationtech.jts.geom.Envelope, float)
      */
     public static List<Envelope> randoms(Envelope bbox, float minRes, float maxRes, int n) {
         List<Envelope> list = new ArrayList<Envelope>(n);

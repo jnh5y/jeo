@@ -14,7 +14,7 @@
  */
 package io.jeo.raster;
 
-import com.vividsolutions.jts.geom.Envelope;
+import org.locationtech.jts.geom.Envelope;
 import io.jeo.util.Dimension;
 import org.osgeo.proj4j.CoordinateReferenceSystem;
 
@@ -115,7 +115,7 @@ public class RasterQuery {
     /**
      * Bounds constraints on the query, may be <code>null</code> meaning no bounds constraint.
      *
-     * @see #bounds(com.vividsolutions.jts.geom.Envelope)
+     * @see #bounds(org.locationtech.jts.geom.Envelope)
      */
     public Envelope bounds() {
         return bounds;

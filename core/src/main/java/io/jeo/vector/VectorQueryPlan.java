@@ -21,7 +21,7 @@ import io.jeo.filter.Filter;
 import io.jeo.util.Predicate;
 import org.osgeo.proj4j.CoordinateReferenceSystem;
 
-import com.vividsolutions.jts.geom.Envelope;
+import org.locationtech.jts.geom.Envelope;
 import java.util.Set;
 
 /**

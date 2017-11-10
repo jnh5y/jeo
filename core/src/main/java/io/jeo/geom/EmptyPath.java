@@ -14,8 +14,8 @@
  */
 package io.jeo.geom;
 
-import com.vividsolutions.jts.geom.Coordinate;
-import com.vividsolutions.jts.geom.Geometry;
+import org.locationtech.jts.geom.Coordinate;
+import org.locationtech.jts.geom.Geometry;
 
 public class EmptyPath extends CoordinatePath {
 

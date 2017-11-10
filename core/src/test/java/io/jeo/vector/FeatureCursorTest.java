@@ -14,7 +14,7 @@
  */
 package io.jeo.vector;
 
-import com.vividsolutions.jts.geom.Point;
+import org.locationtech.jts.geom.Point;
 import io.jeo.geom.Geom;
 import io.jeo.data.Cursors;
 import io.jeo.proj.Proj;

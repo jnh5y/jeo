@@ -21,7 +21,7 @@ import io.jeo.geom.GeomBuilder;
 import io.jeo.util.Convert;
 
 import com.csvreader.CsvReader;
-import com.vividsolutions.jts.geom.Geometry;
+import org.locationtech.jts.geom.Geometry;
 
 /**
  * Handles CSV file with lat/lon columns.

@@ -19,7 +19,7 @@ import static org.junit.Assert.*;
 import io.jeo.proj.Proj;
 import org.junit.Test;
 
-import com.vividsolutions.jts.geom.Point;
+import org.locationtech.jts.geom.Point;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;

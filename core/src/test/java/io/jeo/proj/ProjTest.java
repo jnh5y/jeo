@@ -22,8 +22,8 @@ import io.jeo.geom.GeomBuilder;
 import org.junit.Test;
 import org.osgeo.proj4j.CoordinateReferenceSystem;
 
-import com.vividsolutions.jts.geom.Envelope;
-import com.vividsolutions.jts.geom.Point;
+import org.locationtech.jts.geom.Envelope;
+import org.locationtech.jts.geom.Point;
 
 public class ProjTest {
 

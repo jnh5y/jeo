@@ -14,16 +14,16 @@
  */
 package io.jeo.geobuf;
 
-import com.vividsolutions.jts.geom.Coordinate;
-import com.vividsolutions.jts.geom.CoordinateSequence;
-import com.vividsolutions.jts.geom.LineString;
-import com.vividsolutions.jts.geom.LinearRing;
-import com.vividsolutions.jts.geom.MultiLineString;
-import com.vividsolutions.jts.geom.MultiPoint;
-import com.vividsolutions.jts.geom.MultiPolygon;
-import com.vividsolutions.jts.geom.Point;
-import com.vividsolutions.jts.geom.Polygon;
-import com.vividsolutions.jts.geom.impl.CoordinateArraySequence;
+import org.locationtech.jts.geom.Coordinate;
+import org.locationtech.jts.geom.CoordinateSequence;
+import org.locationtech.jts.geom.LineString;
+import org.locationtech.jts.geom.LinearRing;
+import org.locationtech.jts.geom.MultiLineString;
+import org.locationtech.jts.geom.MultiPoint;
+import org.locationtech.jts.geom.MultiPolygon;
+import org.locationtech.jts.geom.Point;
+import org.locationtech.jts.geom.Polygon;
+import org.locationtech.jts.geom.impl.CoordinateArraySequence;
 import io.jeo.data.Disposable;
 import io.jeo.geobuf.Geobuf.Data;
 import io.jeo.geobuf.Geobuf.Data.Feature;
@@ -99,8 +99,8 @@ public class GeobufWriter implements Disposable {
         // encode keys
         data.addAllKeys(keys.keySet());
 
-        if (obj instanceof com.vividsolutions.jts.geom.Geometry) {
-            encode((com.vividsolutions.jts.geom.Geometry)obj);
+        if (obj instanceof org.locationtech.jts.geom.Geometry) {
+            encode((org.locationtech.jts.geom.Geometry)obj);
         }
         else if (obj instanceof io.jeo.vector.Feature) {
             encode((io.jeo.vector.Feature)obj);
@@ -130,8 +130,8 @@ public class GeobufWriter implements Disposable {
     }
 
     <T> T analyze(T obj) throws IOException {
-        if (obj instanceof com.vividsolutions.jts.geom.Geometry) {
-            com.vividsolutions.jts.geom.Geometry g = (com.vividsolutions.jts.geom.Geometry) obj;
+        if (obj instanceof org.locationtech.jts.geom.Geometry) {
+            org.locationtech.jts.geom.Geometry g = (org.locationtech.jts.geom.Geometry) obj;
             Geom.visit(g, new GeometryAdapter(true) {
                 @Override
                 public void visit(Point point) {
@@ -165,7 +165,7 @@ public class GeobufWriter implements Disposable {
 
             // calculate key / value index
             for (Map.Entry<String,Object> kv : f.map().entrySet()) {
-                if (kv.getValue() instanceof com.vividsolutions.jts.geom.Geometry) {
+                if (kv.getValue() instanceof org.locationtech.jts.geom.Geometry) {
                     continue;
                 }
 
@@ -209,12 +209,12 @@ public class GeobufWriter implements Disposable {
         return this;
     }
 
-    GeobufWriter encode(com.vividsolutions.jts.geom.Geometry g) throws IOException {
+    GeobufWriter encode(org.locationtech.jts.geom.Geometry g) throws IOException {
         data.setGeometry(doEncode(g));
         return this;
     }
 
-    Geometry doEncode(com.vividsolutions.jts.geom.Geometry g) {
+    Geometry doEncode(org.locationtech.jts.geom.Geometry g) {
         if (g == null) {
             return null;
         }
@@ -319,7 +319,7 @@ public class GeobufWriter implements Disposable {
         int i = 0;
         for (Map.Entry<String,Object> kv : f.map().entrySet()) {
             Object val = kv.getValue();
-            if (val == null || val instanceof com.vividsolutions.jts.geom.Geometry) {
+            if (val == null || val instanceof org.locationtech.jts.geom.Geometry) {
                 continue;
             }
             fb.addValues(encodeValue(val));

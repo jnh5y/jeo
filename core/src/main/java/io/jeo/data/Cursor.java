@@ -14,7 +14,7 @@
  */
 package io.jeo.data;
 
-import com.vividsolutions.jts.geom.Geometry;
+import org.locationtech.jts.geom.Geometry;
 import io.jeo.geom.Bounds;
 import io.jeo.util.Consumer;
 import io.jeo.util.Function;

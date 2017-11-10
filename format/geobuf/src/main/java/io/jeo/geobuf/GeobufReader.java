@@ -14,16 +14,16 @@
  */
 package io.jeo.geobuf;
 
-import com.vividsolutions.jts.geom.CoordinateSequence;
-import com.vividsolutions.jts.geom.GeometryFactory;
-import com.vividsolutions.jts.geom.LineString;
-import com.vividsolutions.jts.geom.LinearRing;
-import com.vividsolutions.jts.geom.MultiLineString;
-import com.vividsolutions.jts.geom.MultiPoint;
-import com.vividsolutions.jts.geom.MultiPolygon;
-import com.vividsolutions.jts.geom.Point;
-import com.vividsolutions.jts.geom.Polygon;
-import com.vividsolutions.jts.geom.impl.PackedCoordinateSequenceFactory;
+import org.locationtech.jts.geom.CoordinateSequence;
+import org.locationtech.jts.geom.GeometryFactory;
+import org.locationtech.jts.geom.LineString;
+import org.locationtech.jts.geom.LinearRing;
+import org.locationtech.jts.geom.MultiLineString;
+import org.locationtech.jts.geom.MultiPoint;
+import org.locationtech.jts.geom.MultiPolygon;
+import org.locationtech.jts.geom.Point;
+import org.locationtech.jts.geom.Polygon;
+import org.locationtech.jts.geom.impl.PackedCoordinateSequenceFactory;
 import io.jeo.data.Disposable;
 import io.jeo.geobuf.Geobuf.Data;
 import io.jeo.geobuf.Geobuf.Data.DataTypeCase;
@@ -88,7 +88,7 @@ public class GeobufReader implements Disposable {
         gFactory = new GeometryFactory(csFactory);
     }
 
-    public com.vividsolutions.jts.geom.Geometry geometry() {
+    public org.locationtech.jts.geom.Geometry geometry() {
         DataTypeCase type = data.getDataTypeCase();
         if (type != DataTypeCase.GEOMETRY) {
             throw new IllegalArgumentException("Geobuf data type: " + type + ", not geometry");
@@ -167,7 +167,7 @@ public class GeobufReader implements Disposable {
         return null;
     }
 
-    com.vividsolutions.jts.geom.Geometry decode(Geometry g) {
+    org.locationtech.jts.geom.Geometry decode(Geometry g) {
         switch (g.getType()) {
             case POINT:
                 return decodePoint(g);
@@ -188,7 +188,7 @@ public class GeobufReader implements Disposable {
         }
     }
 
-    com.vividsolutions.jts.geom.Point decodePoint(Geometry g) {
+    org.locationtech.jts.geom.Point decodePoint(Geometry g) {
         double[] p = new double[dim];
         for (int k = 0; k < dim; k++) {
             p[k] = g.getCoords(k) / e;
@@ -197,21 +197,21 @@ public class GeobufReader implements Disposable {
         return gFactory.createPoint(csFactory.create(p, dim));
     }
 
-    com.vividsolutions.jts.geom.LineString decodeLine(Geometry g) {
+    org.locationtech.jts.geom.LineString decodeLine(Geometry g) {
         return gFactory.createLineString(readAllCoords(g, false));
     }
 
-    com.vividsolutions.jts.geom.LineString decodeLine(Geometry g, int start, int len) {
+    org.locationtech.jts.geom.LineString decodeLine(Geometry g, int start, int len) {
         return gFactory.createLineString(readCoords(g, start, len, false));
     }
 
-    com.vividsolutions.jts.geom.LinearRing
+    org.locationtech.jts.geom.LinearRing
 
     decodeRing(Geometry g, int start, int len) {
         return gFactory.createLinearRing(readCoords(g, start, len, true));
     }
 
-    com.vividsolutions.jts.geom.Polygon decodePolygon(Geometry g) {
+    org.locationtech.jts.geom.Polygon decodePolygon(Geometry g) {
         if (g.getLengthsCount() > 0) {
             return decodePolygon(g, 0, 0, g.getLengthsCount());
         }
@@ -220,7 +220,7 @@ public class GeobufReader implements Disposable {
         }
     }
 
-    com.vividsolutions.jts.geom.Polygon decodePolygon(Geometry g, int start, int lenStart, int nRings) {
+    org.locationtech.jts.geom.Polygon decodePolygon(Geometry g, int start, int lenStart, int nRings) {
         int len = g.getLengths(lenStart);
         LinearRing shell = decodeRing(g, start, len);
 
@@ -234,11 +234,11 @@ public class GeobufReader implements Disposable {
         return gFactory.createPolygon(shell, holes);
     }
 
-    com.vividsolutions.jts.geom.MultiPoint decodeMultiPoint(Geometry g) {
+    org.locationtech.jts.geom.MultiPoint decodeMultiPoint(Geometry g) {
         return gFactory.createMultiPoint(readCoords(g, 0, g.getCoordsCount()/dim, false));
     }
 
-    com.vividsolutions.jts.geom.MultiLineString decodeMultiLine(Geometry g) {
+    org.locationtech.jts.geom.MultiLineString decodeMultiLine(Geometry g) {
         LineString[] lines;
         if (g.getLengthsCount() > 0) {
             lines = new LineString[g.getLengthsCount()];
@@ -257,7 +257,7 @@ public class GeobufReader implements Disposable {
         return gFactory.createMultiLineString(lines);
     }
 
-    com.vividsolutions.jts.geom.MultiPolygon decodeMultiPolygon(Geometry g) {
+    org.locationtech.jts.geom.MultiPolygon decodeMultiPolygon(Geometry g) {
         Polygon[] polygons;
         if (g.getLengthsCount() > 0) {
             List<Polygon> list = new ArrayList<>(g.getLengths(0));
@@ -281,8 +281,8 @@ public class GeobufReader implements Disposable {
         return gFactory.createMultiPolygon(polygons);
     }
 
-    com.vividsolutions.jts.geom.Geometry decodeCollection(Geometry g) {
-        List<com.vividsolutions.jts.geom.Geometry> geoms = new ArrayList<>();
+    org.locationtech.jts.geom.Geometry decodeCollection(Geometry g) {
+        List<org.locationtech.jts.geom.Geometry> geoms = new ArrayList<>();
         if (g.getGeometriesCount() < 2) {
             geoms.add(decode(g));
         }

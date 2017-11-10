@@ -19,7 +19,7 @@ import java.util.Map;
 
 import org.osgeo.proj4j.CoordinateReferenceSystem;
 
-import com.vividsolutions.jts.geom.Geometry;
+import org.locationtech.jts.geom.Geometry;
 
 /**
  * Describes an attribute of a {@link Feature}.

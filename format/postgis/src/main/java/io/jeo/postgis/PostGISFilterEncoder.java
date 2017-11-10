@@ -17,7 +17,7 @@ package io.jeo.postgis;
 import io.jeo.vector.Field;
 import io.jeo.sql.FilterSQLEncoder;
 
-import com.vividsolutions.jts.geom.Geometry;
+import org.locationtech.jts.geom.Geometry;
 
 public class PostGISFilterEncoder extends FilterSQLEncoder {
 

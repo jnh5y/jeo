@@ -14,7 +14,7 @@
  */
 package io.jeo.vector;
 
-import com.vividsolutions.jts.geom.Geometry;
+import org.locationtech.jts.geom.Geometry;
 import io.jeo.util.Util;
 
 import java.util.ArrayList;

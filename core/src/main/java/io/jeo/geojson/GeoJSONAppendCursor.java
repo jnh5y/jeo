@@ -21,7 +21,7 @@ import java.util.HashMap;
 import io.jeo.vector.Feature;
 import io.jeo.vector.FeatureAppendCursor;
 
-import com.vividsolutions.jts.geom.Geometry;
+import org.locationtech.jts.geom.Geometry;
 import io.jeo.vector.MapFeature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -17,17 +17,17 @@ package io.jeo.proj;
 import org.osgeo.proj4j.CoordinateTransform;
 import org.osgeo.proj4j.ProjCoordinate;
 
-import com.vividsolutions.jts.geom.Coordinate;
-import com.vividsolutions.jts.geom.CoordinateFilter;
-import com.vividsolutions.jts.geom.CoordinateSequence;
-import com.vividsolutions.jts.geom.CoordinateSequenceFilter;
+import org.locationtech.jts.geom.Coordinate;
+import org.locationtech.jts.geom.CoordinateFilter;
+import org.locationtech.jts.geom.CoordinateSequence;
+import org.locationtech.jts.geom.CoordinateSequenceFilter;
 
 /**
  * Applies a coordinate transform to the coordinates of a geometry object.
  * <p> 
  * This class isn't intended to be used directly but rather through {@link Proj#reproject()}}.
  * </p>
- * @see Proj#reproject(com.vividsolutions.jts.geom.Geometry, org.osgeo.proj4j.CoordinateReferenceSystem, org.osgeo.proj4j.CoordinateReferenceSystem)
+ * @see Proj#reproject(org.locationtech.jts.geom.Geometry, org.osgeo.proj4j.CoordinateReferenceSystem, org.osgeo.proj4j.CoordinateReferenceSystem)
  */
 public class CoordinateTransformer implements CoordinateSequenceFilter, CoordinateFilter {
 

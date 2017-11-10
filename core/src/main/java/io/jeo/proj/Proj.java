@@ -20,7 +20,7 @@ import java.text.ParseException;
 import java.util.Locale;
 import java.util.regex.Pattern;
 
-import com.vividsolutions.jts.geom.Envelope;
+import org.locationtech.jts.geom.Envelope;
 import io.jeo.geom.Bounds;
 import io.jeo.geom.GeomBuilder;
 import io.jeo.proj.wkt.ProjWKTEncoder;
@@ -37,10 +37,10 @@ import org.osgeo.proj4j.proj.Projection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.vividsolutions.jts.geom.Coordinate;
-import com.vividsolutions.jts.geom.CoordinateSequenceFilter;
-import com.vividsolutions.jts.geom.Geometry;
-import com.vividsolutions.jts.geom.Point;
+import org.locationtech.jts.geom.Coordinate;
+import org.locationtech.jts.geom.CoordinateSequenceFilter;
+import org.locationtech.jts.geom.Geometry;
+import org.locationtech.jts.geom.Point;
 
 /**
  * Projection module utility class.

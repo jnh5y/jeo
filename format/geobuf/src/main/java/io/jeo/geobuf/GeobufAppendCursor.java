@@ -17,7 +17,7 @@ package io.jeo.geobuf;
 import java.io.IOException;
 import java.util.LinkedHashMap;
 
-import com.vividsolutions.jts.geom.Geometry;
+import org.locationtech.jts.geom.Geometry;
 import io.jeo.vector.Feature;
 import io.jeo.vector.FeatureAppendCursor;
 import io.jeo.vector.MapFeature;

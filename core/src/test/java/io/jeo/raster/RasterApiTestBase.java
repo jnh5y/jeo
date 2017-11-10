@@ -14,8 +14,8 @@
  */
 package io.jeo.raster;
 
-import com.vividsolutions.jts.geom.Envelope;
-import com.vividsolutions.jts.geom.Point;
+import org.locationtech.jts.geom.Envelope;
+import org.locationtech.jts.geom.Point;
 import io.jeo.TestData;
 import io.jeo.geom.Geom;
 import io.jeo.proj.Proj;

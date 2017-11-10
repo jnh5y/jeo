@@ -18,9 +18,9 @@ import io.jeo.filter.FilterBuilder;
 import io.jeo.filter.Literal;
 import io.jeo.util.Convert;
 
-import com.vividsolutions.jts.geom.Envelope;
-import com.vividsolutions.jts.io.ParseException;
-import com.vividsolutions.jts.io.WKTReader;
+import org.locationtech.jts.geom.Envelope;
+import org.locationtech.jts.io.ParseException;
+import org.locationtech.jts.io.WKTReader;
 
 /**
  * Helper for CQL/ECQL parsing. 

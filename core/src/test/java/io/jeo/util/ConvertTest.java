@@ -14,7 +14,7 @@
  */
 package io.jeo.util;
 
-import com.vividsolutions.jts.geom.Envelope;
+import org.locationtech.jts.geom.Envelope;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

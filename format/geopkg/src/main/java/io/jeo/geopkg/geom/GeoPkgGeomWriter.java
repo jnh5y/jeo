@@ -18,13 +18,13 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
-import com.vividsolutions.jts.geom.Envelope;
-import com.vividsolutions.jts.geom.Geometry;
-import com.vividsolutions.jts.geom.Point;
-import com.vividsolutions.jts.io.ByteOrderValues;
-import com.vividsolutions.jts.io.OutStream;
-import com.vividsolutions.jts.io.OutputStreamOutStream;
-import com.vividsolutions.jts.io.WKBWriter;
+import org.locationtech.jts.geom.Envelope;
+import org.locationtech.jts.geom.Geometry;
+import org.locationtech.jts.geom.Point;
+import org.locationtech.jts.io.ByteOrderValues;
+import org.locationtech.jts.io.OutStream;
+import org.locationtech.jts.io.OutputStreamOutStream;
+import org.locationtech.jts.io.WKBWriter;
 
 public class GeoPkgGeomWriter {
 

@@ -14,7 +14,7 @@
  */
 package io.jeo.mbtiles;
 
-import com.vividsolutions.jts.geom.Envelope;
+import org.locationtech.jts.geom.Envelope;
 import io.jeo.data.Cursor;
 import io.jeo.proj.Proj;
 import io.jeo.tile.Tile;

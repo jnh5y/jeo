@@ -14,7 +14,7 @@
  */
 package io.jeo.geopkg.geom;
 
-import com.vividsolutions.jts.io.ByteOrderValues;
+import org.locationtech.jts.io.ByteOrderValues;
 
 class Flags {
 

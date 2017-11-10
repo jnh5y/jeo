@@ -35,9 +35,9 @@ import org.gdal.ogr.Feature;
 import io.jeo.vector.Field;
 import io.jeo.vector.Schema;
 
-import com.vividsolutions.jts.geom.Geometry;
-import com.vividsolutions.jts.io.ParseException;
-import com.vividsolutions.jts.io.WKBReader;
+import org.locationtech.jts.geom.Geometry;
+import org.locationtech.jts.io.ParseException;
+import org.locationtech.jts.io.WKBReader;
 
 public class OGRFeature implements io.jeo.vector.Feature {
 
